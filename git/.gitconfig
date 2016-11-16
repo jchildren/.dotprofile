@@ -1,0 +1,7 @@
+[user]
+	email = john@cognitivelogic.com
+	name = John Children
+[credential]
+	helper = cache
+[commit]
+	template = ~/.gitmessage

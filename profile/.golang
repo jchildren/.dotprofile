@@ -1,0 +1,8 @@
+# adds golang binary to path
+export PATH=$PATH:/usr/local/go/bin
+
+# sets GOPATH
+export GOPATH=$HOME/Workspace
+
+# adds GOPATH binaries to PATH
+export PATH=$PATH:$GOPATH/bin
