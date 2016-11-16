@@ -1,4 +1,5 @@
-for DOTFILE in ./profile/*
+for file in ~/.dotprofile/profile/*
 do
-  [ -f “$DOTFILE” ] && source “$DOTFILE”
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+  echo $file;
 done
