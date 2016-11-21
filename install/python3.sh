@@ -19,6 +19,8 @@ PACKAGES=(
     numexpr
     yapf
     prospector
+    mypy-lang
+    typed-ast
 )
 
 sudo -H pip3 install ${PACKAGES[@]}
