@@ -1,0 +1,53 @@
+Config {
+      font = "xft:Hack:size=10"
+    , additionalFonts = []
+    , borderColor = "black"
+    , border = TopB
+    , bgColor = "#002b36"
+    , fgColor = "#657b83"
+
+    , alpha = 255
+    , position = Top
+    , textOffset = -1
+    , iconOffset = -1
+    , lowerOnStart = True
+    , pickBroadest = False
+    , persistent = False
+    , hideOnStart = False
+    , iconRoot = "."
+    , allDesktops = True
+    , overrideRedirect = True
+
+    , commands =
+        [ Run Network "wlp2s0"  [  "--low"     ,    "#859900"
+                                ,  "--normal"  ,    "#2aa198"
+                                ,  "--high"    ,    "#dc322f"
+                                ] 10
+        , Run Cpu               [   "-L"        ,   "3"
+                                ,   "-H"        ,   "50"
+                                ,   "--low"     ,   "#859900"
+                                ,   "--normal"  ,   "#2aa198"
+                                ,   "--high"    ,   "#dc322f"
+                                ] 10
+        , Run Memory            [   "-t"        ,   "Mem: <usedratio>%"
+                                ,   "--low"     ,   "#859900"
+                                ,   "--normal"  ,   "#2aa192"
+                                ,   "--high"    ,   "#dc322f"
+                                ] 10
+        , Run Swap              [   "--low"     ,   "#859900"
+                                ,   "--normal"  ,   "#2aa192"
+                                ,   "--high"    ,   "#dc322f"
+                                ] 10
+        , Run Battery           [   "--low"     ,   "#dc332f"
+                                ,   "--normal"  ,   "#2aa192"
+                                ,   "--high"    ,   "#859900"
+                                ] 600
+        , Run Date "<fc=#93a1a1>%a %b %_d %Y %H:%M:%S</fc>" "date" 10
+        , Run StdinReader
+        ]
+
+    -- templating
+    , sepChar = "%"
+    , alignSep = "}{"
+    , template = "%StdinReader% }{ %cpu%  %memory%  %swap% | %battery% | %wlp2s0% | <fc=#ee9a00>%date%</fc>"
+}
