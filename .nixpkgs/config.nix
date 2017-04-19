@@ -7,7 +7,11 @@ in rec {
         my_neovim
         pkgs.ctags
 
+        # python
         my_python
+
+        # golang
+        pkgs.go
     ];
   };
 
@@ -16,8 +20,8 @@ in rec {
       configure = import ./nvim/default.nix { inherit pkgs; };
   };
 
-  my_python = pkgs.python35.buildEnv.override {
-    extraLibs = with pkgs.python35Packages; [
+  my_python = pkgs.python3.buildEnv.override {
+    extraLibs = with pkgs.python3Packages; [
         jupyter
 
         requests2

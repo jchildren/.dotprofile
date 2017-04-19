@@ -25,6 +25,9 @@
     " enables tagbar hotkey
     nmap <F8> :TagbarToggle<CR>
 
+    map <C-n> :NERDTreeToggle<CR>
+    autocmd vimenter * NERDTree
+    
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
@@ -41,15 +44,21 @@
   vam.knownPlugins = pkgs.vimPlugins;
   vam.pluginDictionaries = [
     { names = [
+      # Appearance
       "Solarized"
       "vim-airline"
       "vim-airline-themes"
 
+      # General functionality
       "Syntastic"
       "ctrlp"
       "fugitive"
       "tagbar"
+      "nerdtree"
       "youcompleteme"
+
+      # Language specific
+      "vim-go"
       ];
     }
   ];
