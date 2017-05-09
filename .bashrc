@@ -25,4 +25,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# git completion for bash
+source $HOME/.gitcompletion
+
 export GOPATH=$HOME/Workspace
+export PATH=$PATH:$GOPATH/bin

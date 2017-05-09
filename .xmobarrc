@@ -19,12 +19,14 @@ Config {
     , overrideRedirect = True
 
     , commands =
-        [ Run Network "wlp2s0"  [  "--low"     ,    "#859900"
+        [ Run Network "wlp2s0"  [  "-L"        ,    "30"
+                                ,  "-H"        ,    "70"
+                                ,  "--low"    ,   "#859900"
                                 ,  "--normal"  ,    "#2aa198"
                                 ,  "--high"    ,    "#dc322f"
                                 ] 10
-        , Run Cpu               [   "-L"        ,   "3"
-                                ,   "-H"        ,   "50"
+        , Run Cpu               [   "-L"        ,   "15"
+                                ,   "-H"        ,   "75"
                                 ,   "--low"     ,   "#859900"
                                 ,   "--normal"  ,   "#2aa198"
                                 ,   "--high"    ,   "#dc322f"

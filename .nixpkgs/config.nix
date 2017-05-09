@@ -9,9 +9,6 @@ in rec {
 
         # python
         my_python
-
-        # golang
-        pkgs.go
     ];
   };
 
@@ -22,6 +19,10 @@ in rec {
 
   my_python = pkgs.python3.buildEnv.override {
     extraLibs = with pkgs.python3Packages; [
+        flake8
+        yapf
+        neovim
+ 
         jupyter
 
         requests2
