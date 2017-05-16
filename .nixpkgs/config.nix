@@ -9,6 +9,10 @@ in rec {
 
         # python
         my_python
+
+        pkgs.stack
+        pkgs.hlint
+        pkgs.binutils
     ];
   };
 
@@ -22,7 +26,7 @@ in rec {
         flake8
         yapf
         neovim
- 
+
         jupyter
 
         requests2
