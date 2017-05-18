@@ -6,6 +6,7 @@ in rec {
     paths = [
         my_neovim
         pkgs.ctags
+        pkgs.gcc
 
         # python
         my_python
