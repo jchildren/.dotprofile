@@ -2,8 +2,8 @@ let
   pkgs_override = import ((import <nixpkgs> {}).fetchFromGitHub {
     owner = "NixOS";
     repo = "nixpkgs";
-    rev = "e50203bfde29065fd7d1f047d9e3797f5c302b76";
-    sha256 = "01v29j2701x4gaihgskryri0kxvxwbb59wymb9yb31q82hv4qhf9";
+    rev = "b9bea6b17f64bf0e29a253855b95d76c1565d6ac";
+    sha256 = "1iimmh4a6kvq2qkdmra81996h6i8iy54hw8l2cmv5g4sdcsx6lgh";
   }) {};
 in
   { pkgs ? pkgs_override }:

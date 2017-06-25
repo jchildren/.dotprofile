@@ -44,6 +44,8 @@
 
     let python_hightlight_all = 1
 
+    " enables ghc-mod checks when writing haskell files
+    autocmd BufWritePost *.hs GhcModCheckAndLintAsync
   '';
 
   vam.knownPlugins = pkgs.vimPlugins;
@@ -62,9 +64,11 @@
       "nerdtree"
       "youcompleteme"
       "vim-gitgutter"
+      "vimproc"
+      "polyglot"
 
       # Language specific
-      "vim-go"
+      "ghcmod"
       ];
     }
   ];

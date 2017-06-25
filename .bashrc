@@ -25,8 +25,16 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Enable powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /run/current-system/sw/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh
+
 # git completion for bash
 source $HOME/.gitcompletion
 
 export GOPATH=$HOME/Workspace
 export PATH=$PATH:$GOPATH/bin
+
+export PATH=$PATH:/home/john/.local/bin
